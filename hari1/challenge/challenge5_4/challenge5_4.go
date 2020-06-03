@@ -8,7 +8,7 @@ import (
 func main() {
 	var email string
 	fmt.Print("Masukkan email: ")
-	fmt.Scan(&email)
+	fmt.Scanln(&email)
 
 	if strings.ContainsAny(email, "") == true {
 		fmt.Println("email harus diisi, tidak boleh kosong")

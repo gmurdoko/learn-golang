@@ -7,27 +7,29 @@ import (
 func main() {
 	var angka int
 	var ganjil int
+	var genap int
 	fmt.Print("Masukkan Angka: ")
 	fmt.Scan(&angka)
-
-	for i := 0; i < angka; i++ {
-		if angka%2 == 0 {
-			i++
-			ganjil = ganjil + i
-			fmt.Print(ganjil, "+")
-		} else {
-			angka = angka - 1
-			i++
-			ganjil = ganjil + i
-			fmt.Print(ganjil, "+")
+	fmt.Print("Ganjil: ")
+	for i := 1; i < angka; i++ {
+		if i%2 != 0 {
+			if i != 1 {
+				fmt.Print(" + ")
+			}
+			fmt.Print(i)
+			ganjil += i
 		}
 	}
-	fmt.Print("=")
-	fmt.Println(ganjil)
-
-	for i := 0; i < angka; i++ {
-		if angka%2 != 0 {
-			print(i)
+	fmt.Println(" = ", ganjil)
+	fmt.Print("Genap: ")
+	for j := 1; j <= angka*2; j++ {
+		if j%2 == 0 {
+			if j != 2 {
+				fmt.Print(" + ")
+			}
+			fmt.Print(j)
+			genap += j
 		}
 	}
+	fmt.Print("=", genap)
 }
