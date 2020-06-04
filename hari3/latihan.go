@@ -18,12 +18,11 @@ func main() {
 	fmt.Print("Masukkan nik yang akan dicari:")
 	fmt.Scanln(&inputNik)
 
-	for nik, namaKaryawan := range karyawan {
-		if nik == inputNik {
-			fmt.Println(nik, namaKaryawan)
-		} else {
-			fmt.Println("orangnya kaga ada")
-		}
+	var value, isExsist = karyawan[inputNik]
+	if isExsist {
+		fmt.Println(value)
+	} else {
+		fmt.Println("orangnya kaga ada")
 	}
 
 }
