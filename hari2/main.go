@@ -44,14 +44,34 @@ func main() {
 	// fmt.Println(kumpulanNama2)
 
 	//array ke slice
-	var kumpulan1 = [...]string{"a", "b", "c"}
-	var kumpulan2 = kumpulan1[:]
-	var kumpulan4 = kumpulan2[0:1]
+	// var kumpulan1 = [...]string{"a", "b", "c"}
+	// var kumpulan2 = kumpulan1[:]
+	// var kumpulan4 = kumpulan2[0:1]
 
-	fmt.Println(kumpulan4)
-	fmt.Println(len(kumpulan4)) // panjang array
-	fmt.Println(cap(kumpulan4)) // kapasitas array
+	// fmt.Println(kumpulan4)
+	// fmt.Println(len(kumpulan4)) // panjang array
+	// fmt.Println(cap(kumpulan4)) // kapasitas array
 
 	// kumpulan2 = append(kumpulan2, "kumpulan1")
 	// fmt.Printf("%v\n", kumpulan2)
+
+	//looping array
+	// var kumpulan = [...]string{"budi", "tono", "tini", "sasa"}
+
+	// for i := 0; i < len(kumpulan); i++ {
+	// 	fmt.Println(kumpulan[i])
+	// }
+	// panjang := len(kumpulan)
+	// fmt.Println(panjang)
+	// fmt.Println(kumpulan)
+	// for c := len(kumpulan) - 1; c >= 0; c-- {
+	// 	// fmt.Println(c)
+	// 	fmt.Println(kumpulan[c])
+	// }
+
+	//for range pada array
+	var kumpulan = [...]string{"budi", "tono", "tini", "sasa"}
+	for index, value := range kumpulan {
+		fmt.Println(index, value)
+	}
 }
