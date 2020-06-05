@@ -9,12 +9,19 @@ func main() {
 	deret1 := []int{6, 2, 4, 10, 5}
 	deret2 := []int{3, 9, 10, 13, 1, 2}
 
-	sort.Ints(deret1)
-	fmt.Println("Terbesar: ", deret1[len(deret1)-1])
-	fmt.Println("Terkecil: ", deret1[0])
+	iniMax, iniMin := maxMin(deret1)
+	fmt.Println("Terbesar: ", iniMax)
+	fmt.Println("Terkecil: ", iniMin)
 
-	sort.Ints(deret2)
-	fmt.Println("Terbesar: ", deret2[len(deret2)-1])
-	fmt.Println("Terkecil: ", deret2[0])
+	iniMax, iniMin = maxMin(deret2)
+	fmt.Println("Terbesar: ", iniMax)
+	fmt.Println("Terkecil: ", iniMin)
 
+}
+
+func maxMin(inputDeret []int) (max, min int, string) {
+	sort.Ints(inputDeret)
+	max = inputDeret[len(inputDeret)-1]
+	min = inputDeret[0]
+	return max, min
 }

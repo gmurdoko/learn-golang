@@ -6,21 +6,21 @@ import (
 )
 
 func olehOleh(saldo int, listHarga []int) {
-	// var kosong int = 0
+	var kosong int = 0
 	sort.Ints(listHarga)
-	// for i := 0; i < len(listHarga)-1; i++ {
-	// 	for j := i + 1; j <= len(listHarga)-1; j++ {
-	// 		if listHarga[i] > listHarga[j] {
-	// 			kosong = listHarga[i]
-	// 			listHarga[i] = listHarga[j]
-	// 			listHarga[j] = kosong
+	for i := 0; i < len(listHarga)-1; i++ {
+		for j := i + 1; j <= len(listHarga)-1; j++ {
+			if listHarga[i] > listHarga[j] {
+				kosong = listHarga[i]
+				listHarga[i] = listHarga[j]
+				listHarga[j] = kosong
 
-	// 		}
+			}
 
-	// 	}
+		}
 
-	// }
-	// fmt.Println(listHarga)
+	}
+	fmt.Println(listHarga)
 	var jumlahBarang int = 0
 	for a := 0; a < len(listHarga); a++ {
 		if listHarga[a] <= saldo {
