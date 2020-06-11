@@ -11,7 +11,7 @@ func main() {
 
 	sliceKata := strings.Split(kata, " ")
 	for indexKata, isiKata := range sliceKata {
-		for i := indexKata; i < len(sliceKata); i++ {
+		for i := indexKata; i <= len(sliceKata); i++ {
 			if isiKata != cari {
 				fmt.Println("tidak ada Kata-nya")
 			} else {

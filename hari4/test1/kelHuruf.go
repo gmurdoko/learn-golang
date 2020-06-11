@@ -4,9 +4,11 @@ import "fmt"
 
 func main() {
 	huruf := []string{"a", "b", "a", "u", "u", "c", "a"}
-	hitungVarian(huruf)
+	cari := "u"
+	outputFunHitung hitungVarian(huruf)
+	periksaMap(outputFunHitung, cari)
 }
-func hitungVarian(inputHuruf []string) {
+func hitungVarian(inputHuruf []string) []map[string]int { {
 	var hurufMap = []map[string]int{}
 	var hurufA = map[string]int{}
 	var hurufB = map[string]int{}
@@ -33,5 +35,21 @@ func hitungVarian(inputHuruf []string) {
 		}
 	}
 	hurufMap = append(hurufMap, hurufA, hurufB, hurufC, hurufU)
-	fmt.Println(hurufMap)
+	return hurufMap
+}
+
+//(map[string]int, bool)
+func periksaMap(mapString []map[string]int, h string) {
+	// koding disini
+	for _, mapHuruf := range mapString {
+		for index, _ := range mapHuruf {
+			if index == h {
+				fmt.Println("ada")
+			} else {
+				fmt.Println("tidak ada")
+			}
+
+		}
+
+	}
 }

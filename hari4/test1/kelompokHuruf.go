@@ -24,8 +24,11 @@ import (
 
 func main() {
 	huruf := []string{"a", "b", "a", "u", "u", "c", "a"}
+	cariHuruf := "u"
 	arrayMapBaru := hitungVarian(huruf)
 	fmt.Println(arrayMapBaru)
+
+	periksaMap(arrayMapBaru, cariHuruf)
 }
 func hitungVarian(inputHuruf []string) []map[string]int {
 	sort.Strings(inputHuruf)
@@ -45,4 +48,20 @@ func hitungVarian(inputHuruf []string) []map[string]int {
 	}
 	return stringMap
 
+}
+
+//(map[string]int, bool)
+func periksaMap(mapString []map[string]int, h string) {
+	// koding disini
+	for _, mapHuruf := range mapString {
+		for index, _ := range mapHuruf {
+			if index == h {
+				fmt.Println("ada")
+			} else {
+				fmt.Println("tidak ada")
+			}
+
+		}
+
+	}
 }
